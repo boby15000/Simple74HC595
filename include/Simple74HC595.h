@@ -7,6 +7,11 @@
 #ifndef Simple74HC595_INCLUDED
 #define Simple74HC595_INCLUDED
 
+/*
+  Permet de simplier l'utilisation des registres à décalage.
+  Cette library est limité à 10 registres.
+*/
+
 
 class Simple74HC595
 {
@@ -14,8 +19,11 @@ class Simple74HC595
 
     Simple74HC595(byte pin_DS, byte pin_STCP, byte pin_SHCP, byte numberRegistre = 1);
 
-    void Set(byte pin, boolean etat);
-    void SetAll(boolean etat);
+    void Set(byte pin, boolean etat); // Défaut l'état de la Pin
+    void SetAll(boolean etat); // Etat "Haut" ou "Bas" sur toutes les sorties
+    void SetNoUpdate(byte pin, boolean etat);
+    void SetAllNoUpdate(boolean etat);
+    void RefreshRegister();
 
   private :
     int _pin_DS;
@@ -23,8 +31,6 @@ class Simple74HC595
     int _pin_SHCP;
     int _NbrPins;
     boolean _registers[80];
-    void RefreshRegister();
-    void clearRegisters(); 
 };
 
 #endif

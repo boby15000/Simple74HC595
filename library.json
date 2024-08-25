@@ -18,14 +18,9 @@
     ],
     "examples": [
     {
-        "name": "oneTimer",
+        "name": "exemple",
         "base": "exemples/",
-        "files": ["oneTimer.cpp"]
-    },
-    {
-        "name": "moreTimer",
-        "base": "exemples/",
-        "files": ["moreTimer.cpp"]
+        "files": ["exemple.cpp"]
     }
     ],
     "license": "MIT",
