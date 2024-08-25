@@ -1,18 +1,26 @@
 #include <Arduino.h>
+#include <Simple74HC595.h>
+#include <Tempo.h>
 
-// put function declarations here:
-int myFunction(int, int);
+Simple74HC595 hc(12,13,11);
+Tempo tpo;
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+  tpo.Start(10, tpo.Seconde);
+  hc.SetAll(false);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  
+  hc.Set(2, true);
+  delay(1000);
+  hc.Set(2, false);
+  delay(1000);
+
+  if ( tpo.End() ) {
+    hc.Set(4, true);
+    tpo.Start();
+  } 
+
 }
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
-}

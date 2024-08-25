@@ -1,0 +1,44 @@
+{
+    "name": "Simple74HC595",
+    "version": "1.0.0",
+    "description": "Utilisation simple des Registres à Décalage type 74HC595",
+    "keywords": "74HC595",
+    "repository":
+    {
+      "type": "git",
+      "url": "https://github.com/boby15000/Simple74HC595.git"
+    },
+    "authors":
+    [
+      {
+        "name": "Nicolas Fourgheon",
+        "email": "boby15000@hotmail.com",
+        "maintainer": true
+      }
+    ],
+    "examples": [
+    {
+        "name": "oneTimer",
+        "base": "exemples/",
+        "files": ["oneTimer.cpp"]
+    },
+    {
+        "name": "moreTimer",
+        "base": "exemples/",
+        "files": ["moreTimer.cpp"]
+    }
+    ],
+    "license": "MIT",
+    "frameworks": "*",
+    "platforms": "*",
+    "export": {
+      "exclude": [
+        "src/main.cpp",
+        ".*",
+        "/.*",
+        "platformio.ini",
+        "/lib/",
+        "/test/"
+      ]
+    }
+  }
