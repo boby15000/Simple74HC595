@@ -1,0 +1,35 @@
+{
+  "name": "Simple74HC595",
+  "version": "1.0.0",
+  "description": "Bibliothèque simple et légère pour piloter des registres à décalage 74HC595 en daisy-chain (jusqu'à 10 registres, 80 sorties).",
+  "keywords": [
+    "74HC595",
+    "shift register",
+    "registre decalage",
+    "GPIO expander",
+    "daisy-chain",
+    "output expander"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/boby15000/Simple74HC595.git"
+  },
+  "authors": [
+    {
+      "name": "boby15000",
+      "url": "https://github.com/boby15000"
+    }
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/boby15000/Simple74HC595",
+  "frameworks": "arduino",
+  "platforms": "*",
+  "headers": "Simple74HC595.h",
+  "export": {
+    "include": [
+      "src",
+      "include",
+      "exemples"
+    ]
+  }
+}
